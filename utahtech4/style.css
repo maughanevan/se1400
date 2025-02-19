@@ -91,7 +91,6 @@ footer {
   display: grid;
   grid-auto-rows: minmax(0px, auto);
   grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
-  background-color: #ffffff;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
