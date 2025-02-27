@@ -1,10 +1,12 @@
 .grid-container {
     display: grid;
     grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+
 }
 
 header {
-    grid-column: 2 / -2;
+    grid-column-start: 2;
+    grid-column-end: -2;
     grid-row: 1 / 5;
     background-color: lightgoldenrodyellow;
 }
@@ -22,7 +24,8 @@ nav {
 }
 
 footer {
-    grid-column: 2 / 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row: 1 / 4;
     background-color: lightcoral;
 }
