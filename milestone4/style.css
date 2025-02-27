@@ -1,0 +1,34 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+header {
+    grid-column: 2 / -2;
+    grid-row: 1 / 5;
+    background-color: lightgoldenrodyellow;
+}
+
+main {
+    grid-column: 4 / 6;
+    grid-row: 2 / 4;
+    background-color: aquamarine;;
+}
+
+nav {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+    background-color: lightcoral;
+}
+
+footer {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+    background-color: lightcoral;
+}
+
+aside {
+    grid-column: 1 / 2;
+    grid-row: 0 / 2;
+    background-color: lightcoral;
+}
