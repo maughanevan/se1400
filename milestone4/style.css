@@ -45,7 +45,10 @@ nav ul {
     width: 100%;
 }
 
-nav li {}
+nav a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
 
 nav a {
     text-decoration: none;
