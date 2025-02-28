@@ -20,8 +20,9 @@ header {
 main {
     grid-column: 2 / 8;
     grid-row: 3 / 4;
-    background-color: aquamarine;
-    ;
+    background-color: rgb(255, 255, 255);
+    font-family: "calbri", sans-serif;
+    text-align: center;
 }
 
 nav {
@@ -55,7 +56,11 @@ nav a {
 footer {
     grid-column: 2/8;
     grid-row: 9 / 9;
-    background-color: lightcoral;
+    font-family: "calbri", sans-serif;
+    text-align: center;
+    font-size: 0.70rem;
+    text-align: center;
+    font-style: italic;
 }
 
 #wrapper {
