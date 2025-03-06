@@ -14,11 +14,11 @@ header {
   background-color: #003058;
   color: #FFFFFF;
   font-family: Georgia;
-  grid-area: 1 / 1 / 2 / -1;
+  grid-area: 1 / 2 / 2 / -2;
 }
 
 header h1 {
-  background-image: url('utahtechlogo.svg');
+  background-image: url(utahtechlogo.svg);
   background-position: right;
   background-repeat: no-repeat;
   padding-left: 1em;
@@ -39,7 +39,7 @@ nav {
   margin: 0;
   position: sticky;
   top: 0;
-  grid-area: 2 / 1 / 3 / -1;
+  grid-area: 2 / 2 / 3 / -2;
 }
 
 nav ul {
@@ -48,7 +48,7 @@ nav ul {
   margin: 0;
   padding: 0;
   width: 100%;
-  grid-template-columns: repeat(4, 250px);
+  grid-template-columns: 250px 250px 250px 250px;
 }
 
 nav ul li {
@@ -71,7 +71,7 @@ main {
   padding-left: 2rem;
   padding-right: 2rem;
   background: #ffffff;
-  grid-area: 4 / 1 / 5 / -1;
+  grid-area: 4 / 2 / 5 / -2;
 }
 
 main img {
@@ -84,19 +84,41 @@ footer {
   text-align: center;
   font-style: italic;
   padding: 1rem;
-  grid-area: 5 / 1 / 6 / -1;
+  grid-area: 5 / 2 / 6 / -2;
 }
 
 #wrapper {
   display: grid;
   grid-auto-rows: minmax(0px, auto);
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   min-width: 960px;
   max-width: 2048px;
   box-shadow: 0px 3px 3px rgba(66, 66, 66, 0.3);
+}
+
+#homehero,
+#studenthero,
+#facultyhero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  grid-area: 3 / 2 / 4 / -2;
+}
+
+#homehero {
+  background-image: url('homehero.jpg');
+}
+
+#studenthero {
+  background-image: url('studenthero.jpg');
+}
+
+#facultyhero {
+  background-image: url('facultyhero.jpg');
 }
 
 #bluebar {
@@ -119,64 +141,57 @@ footer {
   grid-area: 3 / 1 / 4 / -1;
 }
 
-#homehero {
-  background-image: url('homehero.jpg');
-}
-
-#studenthero {
-  background-image: url('studenthero.jpg');
-}
-
-#facultyhero {
-  background-image: url('facultyhero.jpg');
-}
-
 @media only screen and (max-width: 1100px) {
   #wrapper {
+    display: grid;
     grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 150px)) minmax(0px, 1fr);
+    grid-auto-rows: minmax(0px, auto);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 960px;
+    max-width: 2048px;
+    box-shadow: 0px 3px 3px rgba(66, 66, 66, 0.3);
   }
 }
 
 @media only screen and (max-width: 900px) {
   nav {
-    position: static;
     grid-area: 2 / 1 / 3 / 6;
+    position: static;
   }
 
   nav ul {
-    display: flex;
     flex-flow: column nowrap;
   }
 
   #homehero,
   #studenthero,
   #facultyhero {
-    grid-area: 2 / 5 / 3 / 8;
+    grid-area: 2 / 5 / 3 / 9;
     height: auto;
+
+    main img {
+      float: none;
+      width: 100%;
+      height: auto;
+      padding-left: 0px;
+    }
   }
 
-  main img {
-    float: none;
-    width: 100%;
-    height: auto;
-    padding-left: 0;
-  }
-}
+  @media only screen and (max-width: 600px) {
+    header h1 {
+      background-image: none;
+      text-align: center;
+    }
 
+    nav {
+      grid-area: 2 / 1 / 3 / -1;
+    }
 
-@media only screen and (max-width: 600px) {
-  header h1 {
-    background-image: none;
-    text-align: center;
+    #homehero,
+    #studenthero,
+    #facultyhero {
+      display: none;
+    }
   }
-
-  nav {
-    grid-area: 2 / 1 / 3 / -1;
-  }
-
-  #homehero,
-  #studenthero,
-  #facultyhero {
-    display: none;
-  }
-}
