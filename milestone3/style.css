@@ -1,0 +1,36 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+header {
+    grid-column: 2/8;
+    grid-row: 1 / 2;
+    background-color: lightgoldenrodyellow;
+}
+
+main {
+    grid-column: 2 / 8;
+    grid-row: 3 / 4;
+    background-color: aquamarine;
+    ;
+}
+
+nav {
+    grid-column: 2 / 8;
+    grid-row: 2 / 2;
+    background-color: lightcoral;
+}
+
+footer {
+    grid-column: 2/8;
+    grid-row: 9 / 9;
+    background-color: lightcoral;
+}
+
+#wrapper {
+    display: grid;
+    grid-auto-rows: minmax(0px, auto);
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+    width: 100%;
+}

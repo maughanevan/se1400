@@ -1,0 +1,74 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+header {
+    grid-column: 2/8;
+    grid-row: 1 / 2;
+    background-color: rgb(0, 0, 0);
+    font-family: "calbri", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+main {
+    grid-column: 2 / 8;
+    grid-row: 3 / 4;
+    background-color: rgb(255, 255, 255);
+    font-family: "calbri", sans-serif;
+    text-align: center;
+}
+
+nav {
+    grid-column: 2 / 8;
+    grid-row: 2 / 2;
+    color: #000000;
+    padding: 1rem 0;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: "calbri", sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem;
+}
+
+footer {
+    grid-column: 2/8;
+    grid-row: 9 / 9;
+    font-family: "calbri", sans-serif;
+    text-align: center;
+    font-size: 0.70rem;
+    text-align: center;
+    font-style: italic;
+}
+
+#wrapper {
+    display: grid;
+    grid-auto-rows: minmax(0px, auto);
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+    width: 100%;
+}
