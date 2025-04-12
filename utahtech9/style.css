@@ -36,7 +36,6 @@ h3 {
   color: #003058;
 }
 
-
 header a {
   text-decoration: none;
   color: #FFFFFF;
@@ -132,6 +131,10 @@ footer {
   background-image: url('alumnihero.jpg');
 }
 
+#shophero {
+  background-image: url('shophero.jpg');
+}
+
 #bluebar {
   background-color: #003058;
   grid-area: 1 / 1 / 2 / -1;
@@ -218,7 +221,6 @@ video {
   #wrapper {
     grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 150px)) minmax(0px, 1fr);
   }
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -246,37 +248,37 @@ video {
     padding-left: 0;
   }
 
-  @media (max-width: 900px) {
-    video {
-      float: none;
-      margin: 0;
-      width: 100%;
-      height: auto;
-    }
-
-    #shoppingcart {
-      grid-template-columns: repeat(2, 1fr);
+  #shoppingcart {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  @media only screen and (max-width: 600px) {
-    header h1 {
-      background-image: none;
-      text-align: center;
-    }
-
-    nav {
-      grid-area: 2 / 1 / 3 / -1;
-    }
-
-    #homehero,
-    #studenthero,
-    #facultyhero,
-    #alumnihero,
-    #shophero {
-      display: none;
-    }
-
-    #shopingcart {
-      grid-template-columns: 1fr
-    }
+  video {
+    float: none;
+    margin: 0;
+    width: 100%;
+    height: auto;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  header h1 {
+    background-image: none;
+    text-align: center;
+  }
+
+  nav {
+    grid-area: 2 / 1 / 3 / -1;
+  }
+
+  #homehero,
+  #studenthero,
+  #facultyhero,
+  #alumnihero,
+  #shophero {
+    display: none;
+  }
+
+  #shoppingcart {
+    grid-template-columns: 1fr;
+  }
+}
