@@ -282,7 +282,7 @@ video {
   }
 
   #shoppingcart {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr;
   }
 }
